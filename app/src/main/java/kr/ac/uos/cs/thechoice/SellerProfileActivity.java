@@ -1,47 +1,26 @@
 package kr.ac.uos.cs.thechoice;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.Window;
-import android.widget.ImageView;
-import android.widget.RadioGroup;
 
 
-public class RegisterActivity extends Activity {
-
-    ImageView btnNext;
-    RadioGroup radioUserType;
+public class SellerProfileActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_register);
-        btnNext = (ImageView)findViewById(R.id.register_btn_next);
-        radioUserType = (RadioGroup)findViewById(R.id.register_radio_usertype);
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int userTypeSelectId = radioUserType.getCheckedRadioButtonId();
-
-                Intent i = new Intent(getApplicationContext(), CoinActivity.class);
-                i.putExtra("userType", userTypeSelectId);
-                startActivity(i);
-
-
-            }
-        });
+        setContentView(R.layout.activity_seller_profile);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_register, menu);
+        getMenuInflater().inflate(R.menu.menu_seller_profile, menu);
         return true;
     }
 

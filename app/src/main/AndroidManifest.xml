@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.ac.uos.cs.thechoice" >
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -10,6 +12,11 @@
         <activity
             android:name="kr.ac.uos.cs.thechoice.SplashActivity"
             android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="kr.ac.uos.cs.thechoice.RegisterActivity"
@@ -20,16 +27,13 @@
             android:label="@string/title_activity_coin" >
         </activity>
         <activity
-            android:name=".ConsumerProfileActivity"
+            android:name="kr.ac.uos.cs.thechoice.ConsumerProfileActivity"
             android:label="@string/title_activity_consumer_profile" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity
+            android:name="kr.ac.uos.cs.thechoice.SellerProfileActivity"
+            android:label="@string/title_activity_seller_profile" >
         </activity>
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
-
 
 </manifest>

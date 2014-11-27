@@ -7,5 +7,6 @@
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_coin">CoinActivity</string>
     <string name="title_activity_consumer_profile">ConsumerProfile</string>
+    <string name="title_activity_seller_profile">SellerProfileActivity</string>
 
 </resources>
