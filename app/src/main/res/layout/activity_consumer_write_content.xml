@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20sp"
+    android:paddingTop="20sp"
+    android:paddingRight="20sp"
+    android:background="#ffcc306f"
+    tools:context=".ComsumerWriteContent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10sp"
+            android:text="@string/write_content_activity_menu_category"
+            style="@style/MenuTexts"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation ="horizontal">
+
+            <TextView
+                android:gravity="center"
+                android:background="#ffb9ff20"
+                android:text = "시발"
+                style="@style/Category" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" >
+            </View>
+            <TextView
+                style = "@style/Category"
+                android:gravity="center"
+                android:background="#ffb9ff20"
+                android:text = "시발"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" >
+            </View>
+            <TextView
+                android:text = "시발"
+                style = "@style/Category"
+                android:gravity="center"
+                android:background="#ffb9ff20"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" >
+            </View>
+            <TextView
+                android:text = "시발"
+                style = "@style/Category"
+                android:background="#ffb9ff20"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" >
+            </View>
+            <TextView
+                android:text = "시발"
+                style = "@style/Category"
+                android:background="#ffb9ff20"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/MenuTexts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/write_content_activity_menu_count"/>
+            <EditText
+                style="@style/EditTexts"
+                android:layout_width="100sp"
+                android:layout_height="40sp"
+                android:id="@+id/activity_comsumer_write_content_peoplecount"
+               />
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="2" >
+        </View>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/MenuTexts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/write_content_activity_menu_budget"/>
+            <EditText
+                style="@style/EditTexts"
+                android:layout_width="150sp"
+                android:layout_height="40sp"
+                android:id="@+id/activity_comsumer_write_content_budget"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </View>
+   </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MenuTexts"
+            android:text="@string/write_content_activity_menu_location"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SubMenuTexts"
+                android:text="@string/write_content_activity_submenu_current_position"/>
+            </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
