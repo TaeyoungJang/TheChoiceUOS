@@ -8,4 +8,14 @@
     <string name="title_activity_coin">CoinActivity</string>
     <string name="title_activity_consumer_profile">ConsumerProfile</string>
 
+    <string name="write_content_activity_menu_category">카테고리</string>
+    <string name="write_content_activity_menu_count">인원</string>
+    <string name="write_content_activity_menu_budget">예산</string>
+    <string name="write_content_activity_menu_location">지역</string>
+    <string name="write_content_activity_submenu_current_position">현재위치</string>
+    <string name="write_content_activity_submenu_nearest_subway">가까운 지하철 역</string>
+    <string name="write_content_activity_menu_title">제목</string>
+    <string name="write_content_activity_menu_details">상세정보</string>
+    <string name="write_content_activity_menu_photo_upload">사진 업로드</string>
+
 </resources>
