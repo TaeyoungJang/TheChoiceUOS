@@ -78,6 +78,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="horizontal"
+                android:checkedButton="@+id/register_radio_gender_male"
                 android:id="@+id/register_radio_gender"
                 >
                 <RadioButton
@@ -86,9 +87,9 @@
                     android:id="@+id/register_radio_gender_male"
                     />
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_male"
                     />
 
                 <RadioButton
@@ -98,13 +99,51 @@
                     />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_female"
                     />
                 </RadioGroup>
 
             </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="회원 종류"
+                />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:checkedButton="@+id/register_radio_usertype_consumer"
+                android:id="@+id/register_radio_usertype"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/register_radio_usertype_seller"
+                    android:text="구매자"
+                    />
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/register_radio_usertype_consumer"
+                    android:text="판매자"
+                    />
+
+            </RadioGroup>
+
+        </LinearLayout>
     </LinearLayout>
 
 

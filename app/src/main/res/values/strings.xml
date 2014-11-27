@@ -7,6 +7,7 @@
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_coin">CoinActivity</string>
     <string name="title_activity_consumer_profile">ConsumerProfile</string>
+    <string name="title_activity_seller_profile">SellerProfileActivity</string>
 
     <string name="write_content_activity_menu_category">카테고리</string>
     <string name="write_content_activity_menu_count">인원</string>

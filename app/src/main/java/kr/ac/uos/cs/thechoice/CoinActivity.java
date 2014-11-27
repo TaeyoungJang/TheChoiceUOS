@@ -25,8 +25,21 @@ public class CoinActivity extends Activity {
         splashImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), ConsumerProfileActivity.class);
-                startActivity(i);
+                Intent recvIntent = getIntent();
+                int userType = recvIntent.getIntExtra("userType", R.id.register_radio_usertype_consumer);
+                Intent i = null;
+                switch(userType){
+                    case R.id.register_radio_usertype_consumer:
+                        i = new Intent(getApplicationContext(), ConsumerProfileActivity.class);
+                        startActivity(i);
+                        break;
+
+                    case R.id.register_radio_usertype_seller:
+                        i = new Intent(getApplicationContext(), SellerProfileActivity.class);
+                        startActivity(i);
+                        break;
+                }
+
             }
         });
     }

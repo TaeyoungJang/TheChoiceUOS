@@ -2,19 +2,17 @@ package kr.ac.uos.cs.thechoice;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.ParcelFileDescriptor;
+import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
-
-import java.io.FileDescriptor;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 
 public class ConsumerProfileActivity extends Activity {
@@ -22,10 +20,23 @@ public class ConsumerProfileActivity extends Activity {
     ImageView btnProfile;
     String currImageURI;
 
+    ImageView btnSave;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_consumer_profile);
+
+        btnSave = (ImageView) findViewById(R.id.consumer_profile_btn_save);
+
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+
+            }
+        });
 
         btnProfile = (ImageView)findViewById(R.id.consumer_profile_profileimage);
 
@@ -47,17 +58,21 @@ public class ConsumerProfileActivity extends Activity {
 
         if(resultCode == RESULT_OK){
             if(requestCode == 1){
-                Uri selectedImageUri = imageReturnedIntent.getData();
-                ParcelFileDescriptor parcelFileDescriptor;
+                Uri selectedImage = imageReturnedIntent.getData();
                 try{
-                    parcelFileDescriptor = getContentResolver().openFileDescriptor(selectedImageUri, "r");
-                    FileDescriptor fileDescriptor = parcelFileDescriptor.getFileDescriptor();
-                    Bitmap image = BitmapFactory.decodeFileDescriptor(fileDescriptor);
-                    parcelFileDescriptor.close();
+
+                    String[] filePathColumn = { MediaStore.Images.Media.DATA };
+
+                    Cursor cursor = getContentResolver().query(selectedImage,
+                            filePathColumn, null, null, null);
+                    cursor.moveToFirst();
+
+                    int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                    String picturePath = cursor.getString(columnIndex);
+
+                    Bitmap image = getScaledBitmap(picturePath, 200, 200);
                     btnProfile.setImageBitmap(image);
-                }catch(FileNotFoundException e){
-                    e.printStackTrace();
-                }catch(IOException e){
+                }catch(Exception e){
                     e.printStackTrace();
                 }
             }
