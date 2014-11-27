@@ -21,6 +21,7 @@
             android:text="닉네임"
             />
         <EditText
+            style="@style/EditTexts"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/register_id"
@@ -38,6 +39,7 @@
             android:text="비밀번호"
             />
         <EditText
+            style="@style/EditTexts"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -49,6 +51,7 @@
             android:text="비밀번호 확인"
             />
         <EditText
+            style="@style/EditTexts"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -159,6 +162,7 @@
             android:text="추천인"
             />
         <EditText
+            style="@style/EditTexts"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/register_recommender"
@@ -174,7 +178,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/titleregister"
+            android:src="@drawable/btn_save_big"
             android:id="@+id/register_btn_next"
             />
     </LinearLayout>

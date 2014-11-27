@@ -12,7 +12,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 
 public class ConsumerProfileActivity extends Activity {
@@ -21,6 +23,9 @@ public class ConsumerProfileActivity extends Activity {
     String currImageURI;
 
     ImageView btnSave;
+
+    ListView lvReviewList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +38,19 @@ public class ConsumerProfileActivity extends Activity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent();
-
+                Intent i = new Intent(getApplicationContext(), ComsumerWriteContent.class);
+                startActivity(i);
             }
         });
 
         btnProfile = (ImageView)findViewById(R.id.consumer_profile_profileimage);
+
+        lvReviewList = (ListView) this.findViewById(R.id.consumer_profile_review_listview);
+        String [] values = new String [] {"후기1","후기2","후기3","후기4"};
+
+        //ArrayAdapter<String> adList = new ArrayAdapter<String>(getActivity(), R.layout.list_item_forecast, R.id.list_item_forecast_textview, fakeData);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.review_listitem, R.id.listitem_review,values);
+        lvReviewList.setAdapter(adapter);
 
         btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
