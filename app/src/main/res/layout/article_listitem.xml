@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/listitem_article"
+    android:orientation="vertical"
+    android:background="#ffc12e5d"
+    android:layout_margin="15dp"
+    >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+
+        >
+        <ImageView
+            android:layout_width="0dip"
+            android:layout_weight="0.5"
+            android:layout_height="100dp"
+            android:id="@+id/listitem_article_image"
+            android:src="@drawable/ic_launcher"
+            android:layout_margin="5dp"
+            android:adjustViewBounds="true" />
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp"
+            android:background="#fffafdd3"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listitem_article_title"
+                android:text="제목"
+                android:layout_margin="5dp"
+                android:background="#ffdcdeb9"
+                android:textSize="10pt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listitem_article_gender"
+                android:text="성별"
+                android:layout_margin="5dp"
+                android:background="#ffdcdeb9"
+                android:textSize="10pt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listitem_article_nearstation"
+                android:text="근처역"
+                android:layout_margin="5dp"
+                android:background="#ffdcdeb9"
+                android:textSize="10pt" />
+
+            
+            </LinearLayout>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:id="@+id/listitem_article_description"
+            android:text="패션 | 12345678998765432"
+            android:background="#fffafdd3"
+            android:layout_gravity="center"
+            android:textSize="9pt" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:id="@+id/listitem_article_btnview"
+            android:src="@drawable/button_see_small"
+            android:adjustViewBounds="true" />
+
+        </LinearLayout>
+    
+    
+
+</LinearLayout>

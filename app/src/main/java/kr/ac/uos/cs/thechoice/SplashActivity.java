@@ -22,7 +22,10 @@ public class SplashActivity extends Activity {
         splashImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
+                // KC수정
+                //Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
+                Intent i = new Intent(getApplicationContext(), ArticleListActivity.class);
+
                 startActivity(i);
             }
         });
