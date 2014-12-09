@@ -3,15 +3,62 @@
     android:background="#ffcc306f"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="1"
     >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:src="@drawable/title_initial"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="50dp"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mainlogo"
+            android:id="@+id/splash_logo"
+            android:layout_gravity="bottom"
+            />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/mainlogo"
-        android:id="@+id/splash_logo"
-        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.4"
+        android:gravity="bottom"
+        >
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:id="@+id/btn_join"
+            android:textSize="30dp"
+            android:background="@drawable/button_join"
+            android:layout_marginBottom="5dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:id="@+id/btn_login"
+            android:textSize="30dp"
+            android:background="@drawable/button_login"
+            android:layout_marginBottom="5dp"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>

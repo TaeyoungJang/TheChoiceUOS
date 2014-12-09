@@ -7,12 +7,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 
 
 public class CoinActivity extends Activity {
 
     ImageView splashImg;
+    Button btnGotoLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,20 @@ public class CoinActivity extends Activity {
 
             }
         });
+
+
+        btnGotoLogin = (Button)findViewById(R.id.btn_goto_login);
+
+        btnGotoLogin.setOnClickListener(new View.OnClickListener() { // 로그인 화면으로 이동
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),LoginActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+
     }
 
 

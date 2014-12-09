@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D8D8D8"
     android:orientation="vertical"
     tools:context="kr.ac.uos.cs.thechoice.RegisterActivity">
 
@@ -19,11 +20,13 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="닉네임"
+            android:layout_marginBottom="5dp"
+            android:textSize="20sp"
             />
         <EditText
             style="@style/EditTexts"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:id="@+id/register_id"
             />
         </LinearLayout>
@@ -37,11 +40,13 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="비밀번호"
+            android:layout_marginBottom="5dp"
+            android:textSize="20sp"
             />
         <EditText
             style="@style/EditTexts"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:inputType="textPassword"
             android:id="@+id/register_password"
             />
@@ -49,11 +54,13 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="비밀번호 확인"
+            android:layout_marginBottom="5dp"
+            android:textSize="20sp"
             />
         <EditText
             style="@style/EditTexts"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:inputType="textPassword"
             android:id="@+id/register_confirm"
             />
@@ -75,6 +82,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="성별"
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"
                 />
 
             <RadioGroup
@@ -120,6 +129,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="회원 종류"
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"
                 />
 
             <RadioGroup
@@ -133,7 +144,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/register_radio_usertype_seller"
-                    android:text="구매자"
+                    android:text="판매자"
                     />
 
 
@@ -141,7 +152,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/register_radio_usertype_consumer"
-                    android:text="판매자"
+                    android:text="구매자"
                     />
 
             </RadioGroup>
@@ -160,11 +171,13 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="추천인"
+            android:textSize="20sp"
+            android:layout_marginBottom="5dp"
             />
         <EditText
             style="@style/EditTexts"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:id="@+id/register_recommender"
             />
     </LinearLayout>
@@ -172,7 +185,9 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:orientation="vertical"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+
+        >
 
         <ImageView
             android:layout_width="wrap_content"
@@ -180,6 +195,7 @@
             android:adjustViewBounds="true"
             android:src="@drawable/btn_save_big"
             android:id="@+id/register_btn_next"
+            android:layout_marginBottom="5dp"
             />
     </LinearLayout>
 

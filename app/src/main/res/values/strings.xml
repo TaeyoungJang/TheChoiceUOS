@@ -18,5 +18,10 @@
     <string name="write_content_activity_menu_details">상세정보</string>
     <string name="write_content_activity_menu_photo_upload">사진 업로드</string>
     <string name="title_activity_article_list">ArticleListActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_post_script">PostScriptActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_review">ReviewActivity</string>
 
 </resources>

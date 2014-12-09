@@ -8,6 +8,7 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
@@ -46,6 +47,12 @@
         <activity
             android:name="kr.ac.uos.cs.thechoice.ArticleListActivity"
             android:label="@string/title_activity_article_list" >
+        </activity>
+        <activity android:name="kr.ac.uos.cs.thechoice.LoginActivity" >
+        </activity>
+        <activity
+            android:name="kr.ac.uos.cs.thechoice.ReviewActivity"
+            android:label="@string/title_activity_review" >
         </activity>
     </application>
 
